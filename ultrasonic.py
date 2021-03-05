@@ -1,6 +1,7 @@
 from gpiozero import DistanceSensor
 from time import sleep
 import numpy as np
+import RPi.GPIO as GPIO
 
 if __name__ == "__main__":
 
