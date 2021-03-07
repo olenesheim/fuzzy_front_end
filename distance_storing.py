@@ -60,8 +60,7 @@ if __name__ == "__main__":
     sensor = DistanceSensor(23, 24)
 
     #Create a file
-    filename = "distances_test1.txt"
-    create_file()
+    filename = create_file()
 
     for i in range(10):
         distance = get_distance(sensor)
