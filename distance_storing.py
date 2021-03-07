@@ -1,3 +1,5 @@
+#Program that reads value from a distance-sensor and stores it in a .txt-file
+
 import time
 import numpy as np
 import RPi.GPIO as GPIO
