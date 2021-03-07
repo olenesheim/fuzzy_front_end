@@ -32,10 +32,11 @@ def get_distance(sensor):
     return distance
 
 
-def create_file(filename):
+def create_file():
     #Create a new txt-file
 
-    new_file = filename
+    print("What do you want to call the file?")
+    new_file = input()
     file1 = open(new_file, "a")
     file1.close()
     return new_file
@@ -60,7 +61,7 @@ if __name__ == "__main__":
 
     #Create a file
     filename = "distances_test1.txt"
-    create_file(filename)
+    create_file()
 
     for i in range(10):
         distance = get_distance(sensor)
