@@ -1,7 +1,11 @@
-from gpiozero import DistanceSensor
 import time
 import numpy as np
 import RPi.GPIO as GPIO
+
+
+#Ultrasonic test-program
+#Takes one measurement of the distance
+
 
 if __name__ == "__main__":
 
@@ -39,12 +43,6 @@ if __name__ == "__main__":
 
     distance = round(distance, 2)
 
-    print("Distance: ", distance)
+    print("Distance: ", distance, " cm")
 
     GPIO.cleanup()
-
-
-    # sensor = DistanceSensor(23, 24) #Trig = GPIO23, Echo = GPIO24
-    # while True:
-    #     print("Distance: ", sensor.distance)
-    #     sleep(1)
