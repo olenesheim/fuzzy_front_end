@@ -24,13 +24,6 @@ if __name__ == "__main__":
     time.sleep(0.00001)
     GPIO.output(TRIG, False)
 
-    #test first
-    # GPIO.setup(23, GPIO.OUT)
-    # GPIO.output(23, GPIO.HIGH)
-    # sleep(3)
-    # GPIO.output(23, GPIO.LOW)
-
-
     while GPIO.input(ECHO) == 0:
         pulse_start = time.time()
 
