@@ -45,7 +45,8 @@ def write_to_file(filename, value):
     #Writes the value to the file
 
     file1 = open(filename, "a")
-    file1.write(value + "\n")
+    writing_value = str(value)
+    file1.write(writing_value + "\n")
     file1.close()
     return 0
 
