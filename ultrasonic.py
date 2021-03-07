@@ -6,10 +6,10 @@ import RPi.GPIO as GPIO
 if __name__ == "__main__":
 
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(1, GPIO.OUT)
-    GPIO.setup(16, GPIO.IN)
+    GPIO.setup(23, GPIO.OUT)
+    GPIO.setup(24, GPIO.IN)
 
-    sensor = DistanceSensor(1, 16) #Trig = GPIO1, Echo = GPIO16
+    sensor = DistanceSensor(23, 24) #Trig = GPIO23, Echo = GPIO24
     while True:
         print("Distance: ", sensor.distance)
         sleep(1)
