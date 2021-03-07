@@ -11,7 +11,10 @@ class DistanceSensor:
         GPIO.output(trig, False)
         time.sleep(0.5)
 
+
 def get_distance(sensor):
+    #Returns the distance from the sensor in cm
+
     GPIO.output(sensor.trig, True)
     time.sleep(0.00001)
     GPIO.output(sensor.trig, False)
@@ -29,6 +32,24 @@ def get_distance(sensor):
     return distance
 
 
+def create_file(filename):
+    #Create a new txt-file
+
+    new_file = filename
+    file1 = open(new_file, "a")
+    file1.close()
+    return new_file
+
+
+def write_to_file(filename, value):
+    #Writes the value to the file
+
+    file1 = open(filename, "a")
+    file1.write(value + "\n")
+    file1.close()
+    return 0
+
+
 if __name__ == "__main__":
 
     GPIO.setmode(GPIO.BCM)
@@ -36,6 +57,12 @@ if __name__ == "__main__":
     #Trigger = GPIO23, echo = GPIO24
     sensor = DistanceSensor(23, 24)
 
-    distance = get_distance(sensor)
+    #Create a file
+    filename = "distances_test1.txt"
+    create_file(filename)
 
-    print("Distance: ", distance, " cm")
+    for i in range(10):
+        distance = get_distance(sensor)
+        print("Writing distance: ", distance, " to the file ", filename)
+        write_to_file(filename, distance)
+        time.sleep(1)
