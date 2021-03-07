@@ -6,8 +6,8 @@ import RPi.GPIO as GPIO
 if __name__ == "__main__":
 
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(23, GPIO.OUT)
-    GPIO.setup(24, GPIO.IN)
+    #PIO.setup(23, GPIO.OUT)
+    #GPIO.setup(24, GPIO.IN)
 
     sensor = DistanceSensor(23, 24) #Trig = GPIO23, Echo = GPIO24
     while True:
