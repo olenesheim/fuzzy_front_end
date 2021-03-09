@@ -64,8 +64,8 @@ if __name__ == "__main__":
     #Create a file
     filename = create_file()
 
-    for i in range(10):
+    for i in range(720):
         distance = get_distance(sensor)
         print("Writing distance: ", distance, " to the file ", filename)
         write_to_file(filename, distance)
-        time.sleep(1)
+        time.sleep(5)

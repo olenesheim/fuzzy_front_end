@@ -7,14 +7,15 @@ import RPi.GPIO as GPIO
 
 if __name__ == "__main__":
 
+    GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(1, GPIO.OUT)
-    GPIO.setup(16, GPIO.OUT)
+    GPIO.setup(23, GPIO.OUT)
+    GPIO.setup(24, GPIO.OUT)
 
-    GPIO.output(1, GPIO.HIGH)
+    GPIO.output(23, GPIO.HIGH)
     sleep(3)
-    GPIO.output(1, GPIO.LOW)
+    GPIO.output(23, GPIO.LOW)
     sleep(1)
-    GPIO.output(16, GPIO.HIGH)
+    GPIO.output(24, GPIO.HIGH)
     sleep(3)
-    GPIO.output(16, GPIO.LOW)
+    GPIO.output(24, GPIO.LOW)
